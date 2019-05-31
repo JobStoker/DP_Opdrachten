@@ -48,4 +48,9 @@ public class OVChipkaart {
 	public int getId() {
 		return id;
 	}
+
+	public void voegProductToe(Product p) {
+		// TODO Auto-generated method stub
+		
+	}
 }

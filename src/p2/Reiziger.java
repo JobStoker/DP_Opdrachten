@@ -1,6 +1,7 @@
 package p2;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Reiziger {
@@ -9,6 +10,8 @@ public class Reiziger {
 	String achternaam;
 	int id;
 	Date bdatum;
+	private ArrayList<OVChipkaart> ovKaarten = new ArrayList<OVChipkaart>();
+
 	
 	public Reiziger() {}
 	
@@ -42,5 +45,11 @@ public class Reiziger {
 	
 	public void setGBdatum(Date dtm) {		
 		bdatum = dtm;
+	}
+	
+	public void voegOvToe(OVChipkaart ov) {
+		if (!this.ovKaarten.contains(ov)) {
+			this.ovKaarten.add(ov);
+		}
 	}
 }
